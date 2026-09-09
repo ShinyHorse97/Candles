@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Candles.Views.FirstPage"
+             Title="FirstPage">
+    <VerticalStackLayout>
+        <!--output and candle fields -->
+        <VerticalStackLayout x:Name="LayoutFields">
+            
+        </VerticalStackLayout>
+
+        <!-- Name and Age field with a button -->
+        <Grid Padding="20" RowDefinitions="*, Auto" >
+            <Grid Grid.Row="1" RowDefinitions="*, *, *" ColumnDefinitions="*,*">
+                <Label Text="Name:" Grid.Row="0" Grid.Column="0" FontSize="Large" />
+                <Entry Grid.Row="0" Grid.Column="1" />
+                <Label Text="Age:" Grid.Row="1" Grid.Column="0" FontSize="Large"/>
+                <Entry Grid.Row="1" Grid.Column="1" />
+                <Button Text="Submit" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,20,0,0"/>
+            </Grid>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
