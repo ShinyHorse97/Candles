@@ -3,21 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Candles.Views.FirstPage"
              Title="FirstPage">
-    <VerticalStackLayout>
-        <!--output and candle fields -->
-        <VerticalStackLayout x:Name="LayoutFields">
-            
-        </VerticalStackLayout>
+    <!--- get age from field, calculate age in ten years and display the amount of candles-->
 
         <!-- Name and Age field with a button -->
         <Grid Padding="20" RowDefinitions="*, Auto" >
-            <Grid Grid.Row="1" RowDefinitions="*, *, *" ColumnDefinitions="*,*">
+            <Grid RowDefinitions="auto,auto">
+                <Label x:Name="ResultLabel" Grid.Row="0" Grid.Column="0" FontSize="Large" VerticalOptions="Start"/>
+                <StackLayout Grid.Row="1" x:Name="LayoutFields" Spacing="8" HorizontalOptions="CenterAndExpand" />
+            </Grid>
+            <Grid Grid.Row="1" RowDefinitions="*, *, *" ColumnDefinitions="*,*" VerticalOptions="End">
                 <Label Text="Name:" Grid.Row="0" Grid.Column="0" FontSize="Large" />
                 <Entry Grid.Row="0" Grid.Column="1" />
                 <Label Text="Age:" Grid.Row="1" Grid.Column="0" FontSize="Large"/>
-                <Entry Grid.Row="1" Grid.Column="1" />
-                <Button Text="Submit" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,20,0,0"/>
+                <Entry x:Name="AgeEntry" Grid.Row="1" Grid.Column="1" />
+                <Button Clicked="OnSubmitClicked" Text="Submit" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
             </Grid>
         </Grid>
-    </VerticalStackLayout>
 </ContentPage>
