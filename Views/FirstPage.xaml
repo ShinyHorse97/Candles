@@ -4,14 +4,15 @@
              x:Class="Candles.Views.FirstPage"
              Title="FirstPage">
     <!--- get age from field, calculate age in ten years and display the amount of candles-->
-
         <!-- Name and Age field with a button -->
         <Grid Padding="20" RowDefinitions="*, Auto" >
+        <ScrollView>
             <Grid RowDefinitions="auto,auto">
                 <Label x:Name="ResultLabel" Grid.Row="0" Grid.Column="0" FontSize="Large" VerticalOptions="Start"/>
                 <StackLayout Grid.Row="1" x:Name="LayoutFields" Spacing="8" HorizontalOptions="CenterAndExpand" />
             </Grid>
-            <Grid Grid.Row="1" RowDefinitions="*, *, *" ColumnDefinitions="*,*" VerticalOptions="End">
+        </ScrollView>
+        <Grid Grid.Row="1" RowDefinitions="*, *, *" ColumnDefinitions="*,*" VerticalOptions="End">
                 <Label Text="Name:" Grid.Row="0" Grid.Column="0" FontSize="Large" />
                 <Entry Grid.Row="0" Grid.Column="1" />
                 <Label Text="Age:" Grid.Row="1" Grid.Column="0" FontSize="Large"/>

@@ -42,7 +42,7 @@ namespace Candles.Views
                 currentRow?.Children.Add(new Image
                 {
                     Source = "candle.png",
-                    HeightRequest = 40,
+                    HeightRequest = 150,
                     HorizontalOptions = LayoutOptions.CenterAndExpand,
                     Aspect = Aspect.AspectFill
                 });
