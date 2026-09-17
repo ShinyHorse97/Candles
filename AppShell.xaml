@@ -8,8 +8,12 @@
     Title="Candles">
 
     <ShellContent
-        Title="Home"
+        Title="fields"
         ContentTemplate="{DataTemplate local:FirstPage}"
         Route="MainPage" />
+    <ShellContent
+        Title="slider"
+        ContentTemplate="{DataTemplate local:SecondPage}"
+        Route="SecondPage" />
 
 </Shell>
